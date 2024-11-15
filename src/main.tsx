@@ -15,6 +15,7 @@ import ButtonsPage from './routes/ButtonsPage/index.tsx';
 import Carousel from './routes/Carrusel/index.tsx';
 import ModalsPage from './routes/ModalsPage/index.tsx';
 import Spinners from './routes/Spinners/index.tsx';
+import { ThemeProvider } from './context/ThemContext.tsx';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 )

@@ -1,22 +1,13 @@
+import Footer from './Footer';
+import Header from './Header';
 import './Root.css'
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Root: React.FC = () => {
   return (
     <div>
       {/* Encabezado con navegación */}
-      <header>
-        <nav>
-          <ul>
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/about">Sobre este proyecto</Link></li>
-            <li><Link to="/buttons">Botones</Link></li>
-            <li><Link to="/carousel">Carrusel</Link></li>
-            <li><Link to="/modals">Modales</Link></li>
-            <li><Link to="/spinners">Spinners</Link></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
 
       {/* Espacio para el contenido dinámico */}
       <main>
@@ -24,9 +15,7 @@ const Root: React.FC = () => {
       </main>
 
       {/* Pie de página */}
-      <footer>
-        <p>Creado por José Javier Sanahuja como parte de mi portafolio profesional.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
